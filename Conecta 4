@@ -1,0 +1,77 @@
+/******************************************************************************
+*******************************************************************************/
+#include <stdio.h>
+
+int tamañoTableroColumnas = 7;
+int tamañoTableroFilas = 8;
+
+char tablero[8][7];
+int jugador = 1;
+void inicializarTablero(){
+    for(int i = 0; i < tamañoTableroFilas; i++){
+        for(int j = 0; j < tamañoTableroColumnas; j++){
+            tablero[i][j] = ' ';
+        }
+    }
+}
+
+void mostarTablero(){
+    for(int i = 0; i < tamañoTableroFilas; i++){
+        for(int j = 0; j < tamañoTableroColumnas; j++){
+            printf("\t|%c", tablero[i][j]);
+        }
+        printf("%\n");
+    }
+}
+    //poner fichas e el tablero
+    //jugador 1 = X
+    //jugador 2 = O
+void ponerFicha(){
+    int columna;
+    if(jugador == 1){
+    printf("Jugador 1, ingresa la coumna (0-6) para colocar fichas: ");
+    scanf("%d", &columna);
+    // Validar la columna ingresada
+    if(columna < 0 || columna >= tamañoTableroColumnas){
+        printf("columna invalida, Intente de nuevo. \n");
+        return;
+    }
+    for(int i = tamañoTableroFilas - 1; i >= 0; i--){
+        if(tablero[i][columna] == ' '){
+            tablero[i][columna] = 'X';
+            break;
+        }
+     }
+     jugador = 2;
+   } else{
+       printf("jugador 2, ingresa la coumna (0-6) para colocar fichas: ");
+    scanf("%d", &columna);
+    // Validar la columna ingresada
+    if(columna < 0 || columna >= tamañoTableroColumnas){
+        printf("columna invalida, Intente de nuevo. \n");
+        return;
+    }
+    for(int i = tamañoTableroFilas - 1; i >= 0; i--){
+        if(tablero[i][columna] == ' '){
+            tablero[i][columna] = 'O';
+            break;
+         }
+      }
+      jugador = 1;
+   }
+}
+
+int main(){
+    
+    inicializarTablero();
+    mostarTablero();
+    
+   for(int i = 0; i < 6; i++){
+       ponerFicha();
+       mostarTablero();
+   }
+    
+    
+    
+    return 0;
+}
