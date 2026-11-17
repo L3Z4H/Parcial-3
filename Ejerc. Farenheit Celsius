@@ -1,0 +1,55 @@
+#include <stdio.h>
+int main()
+{
+float celsius [5];
+float farenheit[5];
+float convertir;
+ float conversion;
+ 
+ 
+farenheit [0] = 0;
+farenheit [1] = 0;
+farenheit [2] = 0;
+farenheit [3] = 0;
+farenheit [4] = 0;
+ 
+for(int i = 0; i < 5; i++){
+    printf("Ingrese la temperatura en farenheit %d: ", i+ 1);
+    scanf("%f", &farenheit[i]);
+}
+
+printf("\n");
+
+for (int i= 0; i < 5; i++){
+printf("Temperatura Farenheit %d: %.1f\n", i + 1, farenheit[i]);
+ 
+   
+}
+ printf("\n");
+ 
+
+celsius [0] = 0;
+celsius [1] = 0;
+celsius [2] = 0;
+celsius [3] = 0;
+celsius [4] = 0;
+
+
+for (int i= 0; i < 5; i++){
+    celsius [i]= (farenheit[i] - 32.0) * 5.0 / 9.0;
+
+    printf("La temperatura en celsius de la temp %d es: %.1f\n", i + 1, celsius[i]);
+ 
+}
+
+
+for(int i=1; int i <5; i++){
+    
+    if(celsius > 28){
+        
+        
+    }
+}
+
+    return 0;
+}
