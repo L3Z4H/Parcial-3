@@ -1,0 +1,91 @@
+#include <stdio.h>
+ 
+int main()
+{
+   int numerosEnteros[10];
+   int numMax= 0;
+   int numMin= 100;
+   int suma =0;
+   
+   
+   for(int i=0; i<10; i++){
+       printf("Ingresa el numeros %d: ", i + 1);
+       scanf("%d", &numerosEnteros[i]);
+   }
+   printf("\n");
+   printf("---INVERSO--\n");
+   
+   
+   //INVERSO 
+   
+    for(int i=9; i>=0; i--){
+       printf("Numero %d: %d\n", i + 1, numerosEnteros[i]);
+    }
+    printf("\n");
+    
+    //NUM MAYOR Y MENOR
+
+   for(int i=0; i<10; i++){
+
+ 
+       if(numerosEnteros[i] > numMax){
+            numMax= numerosEnteros[i];
+        }
+        
+            if(numerosEnteros[i] < numMin){
+            numMin= numerosEnteros[i];
+        }
+         }
+                     printf("El Numero Mayor es: %d\n", numMax );
+            printf("El Numero menor es: %d\n", numMin );
+
+         
+         
+         
+
+         printf("\n");
+//SUMA DE NUMEROS
+
+   for(int i=0; i<10; i++){
+       suma+= numerosEnteros[i];
+   }
+   printf("La suma de los numeros es: %d\n", suma);
+
+//Encontrar Numero
+int num;
+   int encontrado =0;
+
+  printf("\nIngresa un numero: ");
+    scanf("%d", &num);
+
+  for(int i=0; i<10; i++){
+  
+  if(numerosEnteros[i] == num){  
+      
+      encontrado = 1;
+      break;
+  }
+  }
+  
+  
+if( encontrado == 1){
+    
+    printf("El numero %d si se encuentra\n", num);
+}else{
+    printf("El numero %d no se encuentra\n", num);
+}
+  
+  //Posiciones en las que se encuentra
+for(int i=0; i<10; i++){
+  
+  if(numerosEnteros[i] == num){  
+      
+     printf("Numero #%d: El numero %.0d aparece\n",i + 1, num);
+  }
+  }
+
+
+
+ 
+    return 0;
+}
