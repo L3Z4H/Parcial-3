@@ -1,0 +1,71 @@
+
+#include <stdio.h>
+ 
+int main()
+{
+    // int edad = 17;
+    // int edad2= 20;
+    // int *punteroEdad= &edad; //declaracion de un punero que apunta a la vaiable edad
+    // printf("Valor de edad antes de modficar: %d\n", edad);
+    // printf("Direccion de memoria a la variable edad: %p\n", &edad);
+    // printf("Direccion de memoria almacenada en e puntero %p\n", punteroEdad);
+    // //modificar el valor e edad a traves de puntero 
+    // *punteroEdad= 18; //Desrefereciando el puntero para modificar 
+    // printf("Valor de edad despues de modficar: %d\n", edad);
+    // punteroEdad = &edad2; //Desrefereciando el puntero para modificar
+    // *punteroEdad= 21;
+    // printf("valor de edad despues de modificar: %d\n", edad2);
+
+    //EJERCICIO 1
+
+    int edadPersona1= 30;
+    int edadPersona2= 24;
+    int *punteroEdad = &edad1;
+    int eleccion;
+    int otraEdad;
+    // printf("Valor de edad antes de modificar: %d\n", edad1);
+    // *punteroEdad = 40;
+    //     printf("Valor de edad despues de modificar: %d\n", edad1);
+    //     punteroEdad= &edad2;
+    //     *punteroEdad= 90;
+ 
+    //         printf("Valor de edad despues de modificar: %d\n", edad2);
+
+            printf("Edades: Persona 1-- %d años\t Persona 2-- %d años\n", edad1, edad2);
+            printf("\n");
+            printf("A que persona deseas modificar la edad?\n ");
+                scanf("%d", &eleccion);
+                if(eleccion== 1){
+                    punteroEdad= &edadPersona1;
+                    }else if(eleccion==2){
+                        punteroEdad= &edadPersona2;
+                    }else{
+                        printf("Opcion no valida.\n");
+                        return 1;
+                    }
+                    printf("A que edad deseas cambiarla? \n")
+                    scanf("%d", &otraEdad);
+                    *punteroEdad = &otraEdad;
+                    // printf("Valor de edad antes de modificar: %d\n", edad1);
+    // *punteroEdad = 40;
+    //     printf("Valor de edad despues de modificar: %d\n", edad1);
+    //     punteroEdad= &edad2;
+    //     *punteroEdad= 90;
+ 
+    //         printf("Valor de edad despues de modificar: %d\n", edad2);
+ 
+                        
+
+
+
+
+
+ 
+    
+
+ 
+    
+
+ 
+    return 0;
+}
