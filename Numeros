@@ -1,0 +1,54 @@
+#include <stdio.h>
+
+int main(){
+    
+    int numEnteros[8] = {20, 8, 96, 13, 63, 88, 55, 37};
+    int numpares[8];
+    int numimpares[8];
+    int contpares =0;
+    int contimpares =0;
+    
+    
+    
+    
+    
+    for(int i= 0; i<8; i++){
+        printf("Numeros %d: %.0d\n", i+ 1, numEnteros[i]);
+        
+        
+    }
+    printf("\n");
+    
+    
+    for(int i= 0; i<8; i++){
+        
+        if(numEnteros[i] % 2== 0){
+            
+            numpares[contpares]= numEnteros[i];
+            contpares++;
+        }else{
+            
+            numimpares[contimpares]= numEnteros[i];
+            contimpares++;
+        }   
+        
+        
+    }
+    
+    printf("Numeros pares: \n");
+    for(int i =0; i < contpares; i++){
+        printf("Num par %d: %.0d\n", i + 1, numpares[i]);
+    
+    }
+    
+    
+    printf("Numeros impares: \n");
+    for(int i =0; i < contimpares; i++){
+        printf("Num impar %d: %.0d\n", i + 1, numimpares[i]);
+    
+    }
+    
+    
+    
+    
+}
